@@ -6,3 +6,6 @@ How to use:
 - Copy address to input field and click on blue submit button
 - If header is added you can see you website inside iframe
 - If there is no header in response your iframe will be blocked and you will see errors in console "Refused to frame..."
+
+Address to check your frame
+https://dim00n62.github.io/check-csp-partner/
