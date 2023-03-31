@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSP check</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            margin: 100px auto;
+            width: 50%;
+        }
+
+        iframe {
+            width: 720px;
+            height: 640px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function onSet() {
+            const inputElement = document.getElementById('src-input');
+            const href = inputElement.value;
+
+            const iframeElement = document.getElementById('iframe-element');
+            iframeElement.setAttribute('src', href);
+        }
+    </script>
+    <div class="wrapper">
+        <label for="src-input" class="form-label">Enter localhost address or test staned address and submit</label>
+        <input class="form-control" id="src-input"/>
+        <button class="btn btn-primary d-inline-flex align-items-center" onclick="onSet()">Set address to iframe "src"</button>
+    </div>
+    <iframe id="iframe-element"></iframe>
+</body>
+</html>
